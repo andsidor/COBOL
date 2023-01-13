@@ -24,6 +24,26 @@ A brief description of what this project does and who it's for
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 
 
+## Cobol on Linux
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+
+## Cobol on Windows
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+
+
+
+
+
 
 ## 🛠 Skills
 Javascript, HTML, CSS...
