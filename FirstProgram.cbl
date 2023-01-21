@@ -5,22 +5,22 @@
        ENVIRONMENT DIVISION.
 
        configuration section.
-           77 X pic 99.
-           77 Y pic 99.
-           77 Z pic 99.
+
        data division.
        working-storage section.
-         
+       01 XX PIC 9(2).
+       01 YY PIC 99.
+       01 ZZ PIC 99.
        linkage section.
 
        procedure division.
-           display "message2dfdfgdfg".
-           set X to 10.
-           set y to 25.
-           add X Y GIVING Z
-           display "X"X
-           display "Y"Y
-           DISPLAY "X + Y = "Z
+
+           set XX to 10.
+           set YY to 25.
+           add XX YY GIVING ZZ
+           display "X"XX
+           display "Y"YY
+           DISPLAY "X + Y = "ZZ
 
 
            goback.
