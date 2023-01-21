@@ -20,7 +20,7 @@
 ## COBOL GUIDE
 - https://github.com/mikeroyal/COBOL-Guide
 
--https://github.com/openmainframeproject/cobol-programming-course
+- https://github.com/openmainframeproject/cobol-programming-course
 
 ## IBM COBOL TUTORIAL 
 - https://github.com/openmainframeproject/cobol-programming-course
