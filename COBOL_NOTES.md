@@ -32,7 +32,7 @@
 - https://www.ibmmainframer.com/tso-ispf/tso-ispf-introduction/
 
 ## IBM JCL
--https://www.ibmmainframer.com/jcl-tutorial/jcl-introduction/
+- https://www.ibmmainframer.com/jcl-tutorial/jcl-introduction/
 
 
 ## SET UP VS IDE
