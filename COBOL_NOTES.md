@@ -19,20 +19,20 @@
 
 ## COBOL GUIDE
 - https://github.com/mikeroyal/COBOL-Guide
--
+
 -https://github.com/openmainframeproject/cobol-programming-course
 
 ## IBM COBOL TUTORIAL 
--- https://github.com/openmainframeproject/cobol-programming-course
-
--F
+- https://github.com/openmainframeproject/cobol-programming-course
 
 ## IBM DB2
--
+- https://www.ibmmainframer.com/db2-tutorial/db2-introduction/
 
 ## IBM TSO
--
+- https://www.ibmmainframer.com/tso-ispf/tso-ispf-introduction/
 
+## IBM JCL
+-https://www.ibmmainframer.com/jcl-tutorial/jcl-introduction/
 
 
 ## SET UP VS IDE
