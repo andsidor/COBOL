@@ -14,6 +14,27 @@
 ## COBOL Coughlan 
 - https://github.com/Apress/beg-cobol-for-programmers
 
+## COBOL "AWESOME"
+- https://github.com/mickaelandrieu/awesome-cobol
+
+## COBOL GUIDE
+- https://github.com/mikeroyal/COBOL-Guide
+-
+-https://github.com/openmainframeproject/cobol-programming-course
+
+## IBM COBOL TUTORIAL 
+-- https://github.com/openmainframeproject/cobol-programming-course
+
+-F
+
+## IBM DB2
+-
+
+## IBM TSO
+-
+
+
+
 ## SET UP VS IDE
 - https://github.com/openmainframeproject/cobol-programming-course/blob/master/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started.md
 
