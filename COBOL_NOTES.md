@@ -22,6 +22,8 @@
 
 - https://github.com/openmainframeproject/cobol-programming-course
 
++ https://www.geeksforgeeks.org/conditional-statements-in-cobol/
+
 ## IBM COBOL TUTORIAL 
 - https://github.com/openmainframeproject/cobol-programming-course
 
