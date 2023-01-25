@@ -1,8 +1,4 @@
       ******************************************************************
-      * Author:
-      * Date:
-      * Purpose:
-      * Tectonics: cobc
       ******************************************************************
        IDENTIFICATION DIVISION.
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -11,7 +7,7 @@
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
        CONFIGURATION SECTION.
        SPECIAL-NAMES.
-         CLASS PasssingScore IS "A" THRu "C","D".
+           CLASS PasssingScore IS "A" THRu "C","D".
       *-----------------------
        INPUT-OUTPUT SECTION.
       *-----------------------
@@ -36,31 +32,31 @@
       *-----------------------
        PROCEDURE DIVISION.
 
-       DISPLAY "Podaj wiek : "  WITH NO ADVANCING
+           DISPLAY "Podaj wiek : "  WITH NO ADVANCING
        ACCEPT AGE
-       IF AGE >18 THEN
-         DISPLAY "Mozesz glosowaæ"
+           IF AGE >18 THEN
+           DISPLAY "Mozesz glosowaï¿½"
        ELSE
            DISPLAY "Nie mozesz glosowac"
-       END-IF
+           END-IF
 
        *> > < =
        *> NOT EQUAL
-       IF AGE LESS THAN 5
+           IF AGE LESS THAN 5
            DISPLAY "Zostan w domu"
-       END-IF
-       IF AGE> 5 AND AGE< 18 THEN
-         COMPUTE Grade = AGE - 5
-         DISPLAY"GO TO GRADE "GRADE
-       END-IF
-       IF AGE GREATER THAN OR EQUAL 18
+           END-IF
+           IF AGE> 5 AND AGE< 18 THEN
+           COMPUTE Grade = AGE - 5
+           DISPLAY"GO TO GRADE "GRADE
+           END-IF
+           IF AGE GREATER THAN OR EQUAL 18
            DISPLAY"GO TO COLLEGE"
-       END-IF
+           END-IF
 
        *>IF Score IS PASS
-       DISPLAY "PODAJ POJEDYNCZA LICZBE OR X ABY WYJŒC"
+           DISPLAY "PODAJ POJEDYNCZA LICZBE OR X ABY WYJï¿½C"
        ACCEPT TestNumber
-       PERFORM UNTIL NOT Liczba
+           PERFORM UNTIL NOT Liczba
            EVALUATE TRUE
                WHEN IsPIERWSZA DISPLAY "LICZBA PIERWSZA"
                WHEN IsNieParzysta DISPLAY "LICZBA NIEPARZYSTA"
@@ -71,7 +67,7 @@
 
            END-EVALUATE
            ACCEPT TestNumber
-       END-PERFORM
+           END-PERFORM
 
 
 
