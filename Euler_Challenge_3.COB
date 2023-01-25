@@ -1,5 +1,5 @@
       ******************************************************************
-      * Author:
+      * Author:SIDOR Andrzej
       * Date:
       * Purpose:
       * Tectonics: cobc
