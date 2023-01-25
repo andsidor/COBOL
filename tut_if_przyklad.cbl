@@ -33,6 +33,8 @@
        MAIN-PROCEDURE.
        MOVE 25 TO NUM1 NUM3.
               MOVE 15 TO NUM2 NUM4.
+              DISPLAY NUM1
+              DISPLAY NUM3
               IF NUM1 > NUM2 THEN
                 DISPLAY 'IN LOOP 1 - IF BLOCK'
                 IF NUM3 = NUM4 THEN

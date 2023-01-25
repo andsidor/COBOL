@@ -2,7 +2,7 @@
       * Author:
       * Date:
       * Purpose:
-      * Tectonics:
+      * Tectonics: cobc
       ******************************************************************
        IDENTIFICATION DIVISION.
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -18,23 +18,19 @@
        FILE SECTION.
       *-----------------------
        WORKING-STORAGE SECTION.
-       01 A PIC 99(9).
-      	01 I PIC 99(9).
-	      01 X PIC Z(9)9.
-
-       PROCEDURE DIVISION.
+       01 Num1    PIC 9 VALUE 5.
+       01 Num2    PIC 9 VALUE 4.
+       01 Sum1     PIC 99.
+      *-----------------------
+       PROCEDURE DIVISION  .
+       CALL 'tut_subprogram_for_main' USING Num1, Num2, Sum1
+       DISPLAY Num1 " + " Num2 " = " Sum1
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-       MAIN-PROCEDURE.
+
       **
-        DISPLAY "This is an example using increment.".
-	       DISPLAY "-----------------------------------".
-	      DISPLAY "Please enter a value:".
-	      ACCEPT A.
-	      MOVE 0 TO I.
-	       PERFORM UNTIL I GREATER THAN A
-	      	COMPUTE X = I + 1
-	      	DISPLAY X
-      		ADD 1 TO I
-      	END-PERFORM.
+      * The main procedure of the program
+      **
+            DISPLAY "Hello world"
+            STOP RUN.
       ** add other procedures here
        END PROGRAM YOUR-PROGRAM-NAME.

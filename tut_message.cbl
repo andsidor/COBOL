@@ -18,6 +18,8 @@
        FILE SECTION.
       *-----------------------
        WORKING-STORAGE SECTION.
+       01 MyMessage PIC X(20) VALUE 'HI, THIS IS Message'.
+
       *-----------------------
        PROCEDURE DIVISION.
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -26,7 +28,7 @@
       * The main procedure of the program
       **
             DISPLAY "Hello world"
+            DISPLAY MyMessage.
             STOP RUN.
       ** add other procedures here
        END PROGRAM YOUR-PROGRAM-NAME.
-
