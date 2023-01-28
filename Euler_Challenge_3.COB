@@ -6,7 +6,7 @@
       ******************************************************************
        IDENTIFICATION DIVISION.
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-       PROGRAM-ID. Euler1.
+       PROGRAM-ID. Euler3.
        ENVIRONMENT DIVISION.
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
        CONFIGURATION SECTION.
@@ -18,34 +18,42 @@
        FILE SECTION.
       *-----------------------
        WORKING-STORAGE SECTION.
-       01  LICZNIK PIC 9(4) VALUE 0.
-       01  TOTAL PIC 9(7) VALUE 0.
-       01  MAX PIC 9(5) VALUE 1000.
-       01  WYDZIEL PIC 9(3).
-       01  WYDZIEL1 PIC 9(3).
-       01  RESZTA1 PIC 9(3).
-       01  RESZTA PIC 9 VALUE 0.
+           01 WS-TARGET-VALUE         PIC 9(12) VALUE 600851475143.
+           01 WS-PRIME-FACTOR         PIC 9(12) VALUE 2.
+           01 WS-MAX-FACTOR           PIC 9(12) VALUE 2.
+           01 WS-RMNDR                PIC 9(12) VALUE 2.
+           01 WS-RSLT                 PIC 9(12) VALUE 0.
+           01 WS-RSLT-FRMT            PIC Z(12) VALUE 0.
       *-----------------------
        PROCEDURE DIVISION.
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
        MAIN-PROCEDURE.
-       A-PARA.
-       PERFORM B-PARA MAX TIMES.
-         DISPLAY "suma finalna = "TOTAL
-         STOP RUN.
-       B-PARA.
-      *DISPLAY LICZNIK.
 
-       DIVIDE LICZNIK BY 3 GIVING WYDZIEL REMAINDER RESZTA
-       DIVIDE LICZNIK BY 5 GIVING WYDZIEL1 REMAINDER RESZTA1
-      *DISPLAY LICZNIK.
-      *DISPLAY RESZTA.
-      *DISPLAY RESZTA1.
+          DISPLAY "WORKING ON PROJECT EULER PROBLEM 3".
+           DISPLAY "LARGEST PRIME FACTOR FOR 600851475143".
 
-       IF RESZTA IS ZERO OR RESZTA1 IS ZERO
-           ADD LICZNIK TO TOTAL
-      *    DISPLAY TOTAL
-       END-IF.
+           PERFORM UNTIL WS-RSLT = 1 AND WS-RMNDR = 0
 
-       ADD 1 TO LICZNIK.
-       END PROGRAM Euler1.
+               DIVIDE WS-TARGET-VALUE BY WS-PRIME-FACTOR
+                   GIVING WS-RSLT REMAINDER WS-RMNDR
+
+               IF WS-RMNDR = 0
+
+                   IF WS-PRIME-FACTOR > WS-MAX-FACTOR
+                       MOVE WS-PRIME-FACTOR TO WS-MAX-FACTOR
+                   END-IF
+
+                   MOVE 1 TO WS-PRIME-FACTOR
+                   MOVE WS-RSLT TO WS-TARGET-VALUE
+               END-IF
+
+               ADD 1 TO WS-PRIME-FACTOR GIVING WS-PRIME-FACTOR
+
+           END-PERFORM.
+
+           MOVE WS-MAX-FACTOR TO WS-RSLT-FRMT.
+           DISPLAY "LARGEST FACTOR: " WS-RSLT-FRMT.
+
+            STOP RUN.
+
+           END PROGRAM Euler3.
