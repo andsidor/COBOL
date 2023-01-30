@@ -18,34 +18,43 @@
        FILE SECTION.
       *-----------------------
        WORKING-STORAGE SECTION.
-       01  LICZNIK PIC 9(4) VALUE 0.
-       01  TOTAL PIC 9(7) VALUE 0.
-       01  MAX PIC 9(5) VALUE 1000.
-       01  WYDZIEL PIC 9(3).
-       01  WYDZIEL1 PIC 9(3).
-       01  RESZTA1 PIC 9(3).
-       01  RESZTA PIC 9 VALUE 0.
+               01  SUMM PIC 999999.
+               01  CURRNUM PIC 999999999999 VALUE 600851475143.
+               01  MAX PIC 999999 VALUE 0.
+               01  LOOP.
+                 02  I PIC 999 VALUE 999.
+               01  ILOOP.
+                 02  TMP PIC 999999.
+                 02  S PIC X(6).
+                 02  RS PIC X(6).
+                 02  J PIC 999 VALUE 999.
+
       *-----------------------
        PROCEDURE DIVISION.
       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
        MAIN-PROCEDURE.
-       A-PARA.
-       PERFORM B-PARA MAX TIMES.
-         DISPLAY "suma finalna = "TOTAL
-         STOP RUN.
-       B-PARA.
-      *DISPLAY LICZNIK.
+            MAIN-PARA.
+            PERFORM MAIN-LOOP UNTIL I = 0.
+            DISPLAY MAX.
 
-       DIVIDE LICZNIK BY 3 GIVING WYDZIEL REMAINDER RESZTA
-       DIVIDE LICZNIK BY 5 GIVING WYDZIEL1 REMAINDER RESZTA1
-      *DISPLAY LICZNIK.
-      *DISPLAY RESZTA.
-      *DISPLAY RESZTA1.
+            ACCEPT SUMM.
+            STOP RUN.
 
-       IF RESZTA IS ZERO OR RESZTA1 IS ZERO
-           ADD LICZNIK TO TOTAL
-      *    DISPLAY TOTAL
-       END-IF.
+            MAIN-LOOP.
+            PERFORM INNER-LOOP UNTIL J = 0.
+            SUBTRACT 1 FROM I.
+            SET J TO I.
 
-       ADD 1 TO LICZNIK.
+
+            INNER-LOOP.
+
+            SET TMP TO I.
+            MULTIPLY J BY TMP.
+            MOVE TMP TO S.
+            MOVE FUNCTION REVERSE(S) TO RS.
+            IF RS = S AND TMP > MAX THEN
+                MOVE TMP TO MAX
+            END-IF
+
+             SUBTRACT 1 FROM J.
        END PROGRAM Euler1.

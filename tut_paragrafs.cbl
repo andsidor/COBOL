@@ -24,7 +24,7 @@
        01  SUMA2 PIC 9(5) VALUE 0.
        01  WYDZIEL PIC 9(3).
        01  WYDZIEL1 PIC 9(3).
-       01 RESZTA1 PIC 9(3).
+       01  RESZTA1 PIC 9(3).
        01  RESZTA PIC 9 VALUE 0.
       *-----------------------
        PROCEDURE DIVISION.
