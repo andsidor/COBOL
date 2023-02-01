@@ -53,6 +53,7 @@ IDE for Windows
 
 ## IBM COBOL TUTORIAL 
 - https://github.com/openmainframeproject/cobol-programming-course
+- https://www.youtube.com/watch?v=RdMAEdGvtLA
 
 ## IBM DB2
 - https://www.ibmmainframer.com/db2-tutorial/db2-introduction/
