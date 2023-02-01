@@ -17,7 +17,7 @@ IDE for Windows
 - IBM Z® Open Editor - trail version 
 - Visual Studio Code with plugins
 - Visual Studio Professional with Micro Focus Visual COBOL 
-
+~~~~
 - Install IDE
 - Edit program
 - Debug in IDE
