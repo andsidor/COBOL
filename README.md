@@ -12,22 +12,18 @@ A brief description of set up onLinux and Windows
 
 ## Windows
 
-- Install OpenCobolIDE
+IDE for Windows
+- OpenCobolIDE
+- IBM Z® Open Editor - trail version 
+- Visual Studio Code with plugins
+- Visual Studio Professional with Micro Focus Visual COBOL 
+
+- Install IDE
 - Edit program
 - Debug in IDE
 - Save
 
 ~~~~~~~~~~~~~~
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-
-
-## 🛠 Skills
-Javascript, HTML, CSS...
-
-~~~~~~
 
 # COBOL USEFUL LINKS
 
@@ -71,8 +67,6 @@ Javascript, HTML, CSS...
 ## SET UP VS IDE
 - https://github.com/openmainframeproject/cobol-programming-course/blob/master/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started.md
 
-## SET UP ECLIPSE IDE
-- https://github.com/bastie/CODE
 
 
 ## HOW TO:
