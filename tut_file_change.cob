@@ -35,11 +35,17 @@
 
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
-           OPEN OUTPUT CustomerFile.
-             MOVE 00001 TO IDNum.
-             MOVE 'Nicola' TO FirstName.
-             MOVE 'Tesla' TO LastName.
-             WRITE CustomerData
+           OPEN EXTEND CustomerFile.
+           DISPLAY "Podaj ID Klijenta " WITH NO ADVANCING
+           ACCEPT IDNum.
+           DISPLAY "Podaj Imie klijenta " WITH NO ADVANCING
+           ACCEPT FirstName.
+           DISPLAY "Podaj Nazwisko klijenta " WITH NO ADVANCING
+           ACCEPT LastName.
+           WRITE CustomerData
+
+
+
            END-WRITE.
 
 
