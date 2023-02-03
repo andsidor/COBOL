@@ -32,17 +32,21 @@
            02 WSCustName.
                03 WSFirstName    PIC X(15).
                03 WSLastName     PIC X(15).
-           01 WSEOF   PIC A(1).
+
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
-       OPEN INPUT CustomerFile.
-           PERFORM UNTIL WSEOF='Y'
-                READ CustomerFile INTO WSCustomer
-                   AT END MOVE 'Y' TO WSEOF
-                   NOT AT END DISPLAY WSCustomer
-                END-READ
-           END-PERFORM.
-       CLOSE CustomerFile.
+           OPEN EXTEND CustomerFile.
+           DISPLAY "Podaj ID Klijenta " WITH NO ADVANCING
+           ACCEPT IDNum.
+           DISPLAY "Podaj Imie klijenta " WITH NO ADVANCING
+           ACCEPT FirstName.
+           DISPLAY "Podaj Nazwisko klijenta " WITH NO ADVANCING
+           ACCEPT LastName.
+           WRITE CustomerData
+
+
+
+           END-WRITE.
 
 
         CLOSE CustomerFile.
