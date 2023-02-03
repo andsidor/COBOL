@@ -25,6 +25,66 @@
        01 SStr4       PIC X(3).
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
+
+           *> Takes string SampStr counts all characters and
+        *> stores the value in NumChars
+        INSPECT SampStr TALLYING NumChars FOR CHARACTERS.
+        DISPLAY "Number of Characters : " NumChars.
+
+        INSPECT SampStr TALLYING NumEs FOR ALL 'e'.
+        DISPLAY "Number of e's : " NumEs.
+       *> Convert to uppercase
+        DISPLAY FUNCTION UPPER-CASE(SampStr).
+       *> Convert to lowercase
+       DISPLAY FUNCTION LOWER-CASE(SampStr).
+
+       *> Join 2 strings with a space between them
+       *> delimited specifies the end of the string
+       *> being size (the whole string) or spaces
+       *> (up to the 1st space) or some other character
+       *> surrounded with quotes like "#" for example
+       STRING FName DELIMITED BY SIZE
+       SPACE
+       LName DELIMITED BY SIZE
+       INTO FLName.
+       DISPLAY FLName.
+
+       *> Get just the 1st word up to the space
+       *> delimited by size gets the whole string
+       *> and join all 3 into a new string
+       *> If the container isn't big enough for the
+       *> string it overflows.
+       STRING FLName DELIMITED BY SPACES
+       SPACE
+       MName DELIMITED BY SIZE
+       SPACE
+       LName DELIMITED BY SIZE
+       INTO FMLName
+       ON OVERFLOW DISPLAY 'Overflowed'.
+       DISPLAY FMLName.
+
+      *> Grab The egg
+       STRING SStr1 DELIMITED BY SIZE
+       SPACE
+      *> Grab is and the space up to #
+       SStr2 DELIMITED BY "#"
+      *> Insert the above starting at index 1 as defined
+      *> by pointer
+       INTO Dest
+       WITH POINTER Ptr
+       ON OVERFLOW DISPLAY 'Overflowed'.
+       DISPLAY Dest.
+
+        *> Replacing is used to replace strings or characters
+        INSPECT Dest REPLACING ALL 'egg' BY 'dog'.
+        DISPLAY Dest.
+
+        *> Unstring splits a string into multiple strings
+        *> based on a delimiter
+        UNSTRING SStr1 DELIMITED BY SPACE
+        INTO SStr3, SStr4
+        END-UNSTRING.
+         DISPLAY SStr4.
             DISPLAY "Hello world"
             STOP RUN.
        END PROGRAM YOUR-PROGRAM-NAME.
